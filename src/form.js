@@ -11,6 +11,7 @@ export default function form() {
     const priority    = document.querySelector('#priority');
     const savebtn     = document.querySelector('.submitbtn');
     const cancelbtn   = document.querySelector('.cancelbtn');
+    const errorBox    = document.querySelector('.error-box')
     console.log(cancelbtn)
 // --------------------------------------------------------------------------------------------------------
     save(title,desc,dateTime,priority,savebtn)
