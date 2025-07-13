@@ -9,7 +9,7 @@ export default function savingData(title,desc,dateTime,priority,savebtn){
         dataArray = JSON.parse(localStorage.note)
     }
     else{
-        dataArray = [];    
+         dataArray = [];    
     }
     savebtn.addEventListener('click', (e) => {  // => e is event and we want to stop browser from reload
         e.preventDefault;

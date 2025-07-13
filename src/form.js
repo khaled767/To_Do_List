@@ -12,7 +12,7 @@ export default function form() {
     const savebtn     = document.querySelector('.submitbtn');
     const cancelbtn   = document.querySelector('.cancelbtn');
     const errorBox    = document.querySelector('.error-box')
-    console.log(cancelbtn)
+    
 // --------------------------------------------------------------------------------------------------------
     save(title,desc,dateTime,priority,savebtn)
     cancel(title,desc,dateTime,priority,cancelbtn)
