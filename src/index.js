@@ -15,3 +15,25 @@ const month = date.getMonth();        // 0 = Jan, 1 = Feb, ..., 5 = June
   const lastDate = new Date(year, month + 1, 0).getDate(); 
   console.log(`the first day ${firstDay} && last day ${lastDate}`)
   console.log(year, month, date)
+
+// 💡changing the <p> context to input;
+  // const todayEvent = document.querySelector(".todayEvent");
+  // const p = document.createElement("p");
+  // p.textContent = "this is the old element";
+  // todayEvent.prepend(p)
+
+  // p.addEventListener("click", () =>{
+  //   const input = document.createElement('input');
+  //   input.type = "text";
+  //   input.value = p.textContent
+  //   p.replaceWith(input);
+
+  //   // rechanging to <p>
+  //   input.addEventListener("keyup", (e) =>{
+  //     if(e.key === "Enter"){
+  //       p.textContent = input.value;
+  //       input.replaceWith(p);
+  //     }
+  //   })
+  //   input.focus()
+  // })
