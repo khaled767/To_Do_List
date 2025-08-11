@@ -3,22 +3,169 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins",sans-serif;
+    color: #061479;
+}
+
+
+.parent {
+    background-image:linear-gradient(to bottom, #6f79c4 30%, white);
+    display : grid;
+    grid-template-columns: 380px 1fr;
+    grid-template-rows:50px repeat(10, 100px);
+    gap: 10px ;
+    padding: 20px 
+}
+.intro {
+    /* background: rgb(158, 178, 223); */
+    grid-column: 1/5;
+    position: relative;
+    width: max-content;
+    font-size: 24px;
+    align-items: center;
+    color:#5c3d41;
+    justify-content: center;
     
 }
-
-
-body {
-    background-color: #6f79c4;
-    /* color: white; */
+.intro::after {
+    content: '';
+    /* background: yellow; */
+    background: linear-gradient(to right,lightblue,pink);
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom : 0;
+    left: 0;
+    transition: 1.5s;
+    border-radius: 20px;
 }
+.intro:hover::after {
+    width: 0;
+}
+.search, .todayEvent{
+    grid-row: 2/3;
+}
+.todayEvent {
+    align-items: center;
+    color: rgb(11, 18, 124);
+    justify-content: center;
+    display: flex;
+}
+.addTask {
+    grid-row: 3/6;
+    background: #a7addb;
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+.addTask p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form input,.form #priority {
+    display: flex;
+    justify-content: center;
+    /* background-image: linear-gradient(to bottom,white 10%,  #091991); */
+    
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    margin:5px 0;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+input:hover, button:hover {     /* I have some works here */ 
+    letter-spacing: 5px;
+    /* background: rgb(59, 59, 59); */
+    background: #c6c9e2;
+    transition: 1.5s;
+    scale: 1.1;
+}
+.btnStyle{
+    display: flex;
+    justify-content: space-around;
+}
+.search {
+    margin-top: 10px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    
+}
+.search input {
+    margin: 5 10px;
+    width: 350px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(to right,lightblue,pink);
+}
+.form button {
+    border-radius: 20px;
+    width: 140px;
+    height: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    background:#a7addb;
+}
+.render-task {
+    grid-row: 3/6;
+    display:flex;
+    flex-direction:column;
+}
+.render-task .render-task{
+    /* backgro/und: #6f79c4; */
+    display: inline-block;
+    flex-direction: row;
+    margin: 10px ;
+    font-size: 20px;
+    color: rgb(39, 33, 34);
+}
+.render-task p {
+    display: inline;
+}
+.error-box {
+    position: absolute;
+    /* bottom: 250px;
+    left: 320px;
+    margin: 50px;
+    padding: 20px; */
+}
+.error-box p {
+    position: relative;
+    top: 180px;
+    left: 320px;
+    /* background-color: yellow; */
+    margin: 20px;
+    padding: 10px;
+}
+/* -------------Here are the working------------ */
+ button {
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    margin: 5px  ;
+    background:#babedd;
+ }
+ .checkbox {
+    height: 13px;
+    width: 13px;
+    margin: 0px 10px;
+    /* border-radius: 0px; */
 
+}
+ /* -------------Here are the working------------ */
 .calendar{
+    grid-row: 6/9;
     width: 380px;
-    height: auto;
+    height: 350px;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background:#fff ;
+    background:#a7addb ;
     border-radius: 10px;
     box-shadow: 0 0 3px rgb(0,0,0.3);
 }
