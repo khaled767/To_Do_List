@@ -4,45 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <script defer src="main.js"></script></head>
 <body>
-    <p>Things to do</p>
+    <div class="parent">
+    <p class=" intro">Things to do</p>
     <div class="search">
         <h3> menu</h3>
-        <input type="search" class="search-input" placeholder="Search">
+        <input type="search" class="search-input" id="search" placeholder="Search">
     </div>
     <div class="todayEvent">
         <h3>today Events</h3>
     </div>
     <div class="addTask">
-        <button id="taskbtn">add task</button>
+        <p> add a task</p>
        <div class="form">
             <input type="text" class="title" placeholder="title">
+            <small class="error-title" style="color:red"></small>
+
             <input type="text"  class="desc"  placeholder="Description" >
+            <small class="error-desc" style="color:red"></small>
+
             <input type="date" class="datetime" placeholder="due-date">
+            <small class="error-date" style="color:red"></small>
+            
             <select name="priority" id="priority">
-                <option value="1">Priority 1</option>
-                <option value="2">Priority 2</option>
-                <option value="3">Priority 3</option>
+                <option value="Very-important">Priority 1</option>
+                <option value="important">Priority 2</option>
+                <option value="Normal">Priority 3</option>
             </select>
+            <div class="btnStyle">
             <button type="submit" class="submitbtn">save</button>
             <button type="reset"  class="cancelbtn">cancel</button>
-            
+            </div>
         </div>
     </div>
     <div class="error-box"></div>
-
-
+    <div class="render-task"></div>
     <div class="calendar">
         <div class="header">
             <button id="prevBtn">
-                <i class="goes to left"></i>
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
             
         <div class="monthYear" id="monthYear"></div>
             <button id="nextBtn">
-                <i class="goes-to-right"></i>
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
         <div class="days">
@@ -55,6 +64,7 @@
             <div class="day">Sun</div>
         </div>
         <div class="dates" id="dates"></div>
+    </div>
     </div>
 </body>
 </html>
